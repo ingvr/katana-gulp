@@ -1,6 +1,12 @@
 'use strict';
 
-var plugins = require('gulp-load-plugins')();
+var gulp = require('gulp'),
+    plugins = require('gulp-load-plugins')(),
+    browserSync = require("browser-sync"),
+    reload = browserSync.reload,
+    pngquant = require('imagemin-pngquant'),
+	  cleanCSS = require('gulp-clean-css'),
+    rimraf = require('rimraf');
 
 var path = {
 	build: { 
@@ -39,37 +45,37 @@ var config = {
 
 gulp.task('html:build', function () {
 	gulp.src(path.src.html) 
-		.pipe(rigger()) 
-		.pipe(htmlmin())
+		.pipe(plugins.rigger()) 
+		.pipe(plugins.htmlmin())
     .pipe(gulp.dest(path.build.html)) 
 		.pipe(reload({stream: true})); 
 });
 
 gulp.task('js:build', function () {
 	gulp.src(path.src.js) 
-		.pipe(rigger()) 
-		.pipe(sourcemaps.init()) 
-		.pipe(uglify()) 
-		.pipe(sourcemaps.write()) 
+		.pipe(plugins.rigger()) 
+		.pipe(plugins.sourcemaps.init()) 
+		.pipe(plugins.uglify()) 
+		.pipe(plugins.sourcemaps.write()) 
 		.pipe(gulp.dest(path.build.js)) 
 		.pipe(reload({stream: true})); 
 });
 
 gulp.task('style:build', function () {
 	gulp.src(path.src.style) 
-		.pipe(sourcemaps.init()) 
-		.pipe(sass()) 
-		.pipe(prefixer())
-    .pipe(csscomb())
-		.pipe(cssmin()) 
-		.pipe(sourcemaps.write())
+		.pipe(plugins.sourcemaps.init()) 
+		.pipe(plugins.sass()) 
+		.pipe(plugins.autoprefixer())
+    .pipe(plugins.csscomb())
+		.pipe(cleanCSS()) 
+		.pipe(plugins.sourcemaps.write())
 		.pipe(gulp.dest(path.build.css)) 
 		.pipe(reload({stream: true}));
 });
 
 gulp.task('image:build', function () {
 	gulp.src(path.src.img) 
-		.pipe(imagemin({ 
+		.pipe(plugins.imagemin({ 
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()],
@@ -93,19 +99,19 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', function(){
-	watch([path.watch.html], function(event, cb) {
+	plugins.watch([path.watch.html], function(event, cb) {
 		gulp.start('html:build');
 	});
-	watch([path.watch.style], function(event, cb) {
+	plugins.watch([path.watch.style], function(event, cb) {
 		gulp.start('style:build');
 	});
-	watch([path.watch.js], function(event, cb) {
+	plugins.watch([path.watch.js], function(event, cb) {
 		gulp.start('js:build');
 	});
-	watch([path.watch.img], function(event, cb) {
+	plugins.watch([path.watch.img], function(event, cb) {
 		gulp.start('image:build');
 	});
-	watch([path.watch.fonts], function(event, cb) {
+	plugins.watch([path.watch.fonts], function(event, cb) {
 		gulp.start('fonts:build');
 	});
 });
