@@ -14,4 +14,6 @@ bower i
 npm i
 ```
 
-> via https://habrahabr.ru/post/250569/
+via https://habrahabr.ru/post/250569/
+
+*<^__
