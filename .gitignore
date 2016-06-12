@@ -1,0 +1,15 @@
+.DS_Store
+*.swp
+*.log
+node_modules
+bower_components
+build
+*.node
+components
+coverage
+*.orig
+.idea
+sandbox
+test/out-fixtures/*
+test/watch-*.txt
+gulp.1
