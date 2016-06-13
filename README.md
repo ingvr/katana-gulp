@@ -4,6 +4,7 @@ Katana Gulp Config
 *(just for me)*
 
 For beautiful web development!
+
 SCSS files ready to work with [SMACSS](https://smacss.com)
 
 see packages.json to view gulp packages
