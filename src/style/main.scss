@@ -1,11 +1,5 @@
-/*
-* Third Party
-*/
 @import "../../bower_components/normalize.css/normalize.css";
 
-/*
-* Custom
-*/
 @import "variables.scss";
 
 body {
@@ -15,20 +9,7 @@ body {
 	background: $bg;
 }
 
-a {
-
-}
-
-p {
-
-}
-
-h1 {
-	
-}
-
 @import "layot.scss";
 @import "module.scss";
 @import "state.scss";
-
 @import "media.scss";
