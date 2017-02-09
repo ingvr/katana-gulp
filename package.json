@@ -17,7 +17,7 @@
 		"gulp-sass": "^2.3.1",
     "gulp-autoprefixer": "*",
 		"gulp-csscomb": "^3.0.7",
-		"gulp-clean-css": "^2.0.0",
+		"gulp-clean-css": "^3.0.0",
     "gulp-sourcemaps": "*",
 		"gulp-imagemin": "^3.0.1",
 		"imagemin-pngquant": "^4.0.0",
