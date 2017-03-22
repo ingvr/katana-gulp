@@ -1,8 +1,38 @@
 @charset "UTF-8";
 
+%font {
+  font-family: 'Verdana', sans-serif;
+}
+
+%adaptive-bg {
+	background-position: fixed;
+  background-position:center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 // Colors
 $bg: #fff;
 $color: #333;
 
 // Media
-$media-sm: "min-width: 767px";
+$small: 600px;
+$large: 1000px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $small + 1) and (max-width: $large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $large) { @content; }
+  }
+}
+
+// Example: @include respond-to(handhelds) { width: 100%; }
+//          @include respond-to(medium-screens) { width: 50%; }
+
