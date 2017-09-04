@@ -1,11 +1,7 @@
 @charset "UTF-8";
 
-%font {
-  font-family: 'Verdana', sans-serif;
-}
-
 %adaptive-bg {
-	background-position: fixed;
+  background-position: fixed;
   background-position:center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -15,7 +11,11 @@
 
 // Colors
 $bg: #fff;
-$color: #333;
+$color: #2D3033;
+$blue: #18364A;
+$red: #DC3830;
+$gray: #666C72;
+$lightgray: #bbb;
 
 // Media
 $small: 600px;
@@ -36,3 +36,33 @@ $large: 1000px;
 // Example: @include respond-to(handhelds) { width: 100%; }
 //          @include respond-to(medium-screens) { width: 50%; }
 
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// Example: @include transition(color .3s ease);
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Examlpe: @include opacity(0.8);
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Example: @extend %clearfix;
