@@ -18,23 +18,11 @@ $gray: #666C72;
 $lightgray: #bbb;
 
 // Media
-$small: 600px;
-$large: 1000px;
-
-@mixin respond-to($media) {
-  @if $media == handhelds {
-    @media only screen and (max-width: $small) { @content; }
-  }
-  @else if $media == medium-screens {
-    @media only screen and (min-width: $small + 1) and (max-width: $large - 1) { @content; }
-  }
-  @else if $media == wide-screens {
-    @media only screen and (min-width: $large) { @content; }
-  }
-}
-
-// Example: @include respond-to(handhelds) { width: 100%; }
-//          @include respond-to(medium-screens) { width: 50%; }
+$xs: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1199px;
+// Example: @media (max-width: $md) { ... }
 
 @mixin transition($args...) {
   -webkit-transition: $args;
@@ -43,7 +31,6 @@ $large: 1000px;
   -o-transition: $args;
   transition: $args;
 }
-
 // Example: @include transition(color .3s ease);
 
 @mixin opacity($opacity) {
@@ -51,7 +38,6 @@ $large: 1000px;
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
 }
-
 // Examlpe: @include opacity(0.8);
 
 %clearfix {
@@ -64,5 +50,4 @@ $large: 1000px;
     clear: both;
   }
 }
-
 // Example: @extend %clearfix;
