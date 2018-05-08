@@ -12,9 +12,9 @@ let gulp = require('gulp'),
 let path = {
   build: { 
     html: 'build/',
-    js: '../Web/js/',
-    css: '../Web/css/',
-    img: '../Web/images/',
+    js: 'build/js/',
+    css: 'build/css/',
+    img: 'build/images/',
     fonts: 'build/fonts/'
   },
   src: { 
