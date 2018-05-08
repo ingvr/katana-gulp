@@ -1,1 +1,1 @@
-/* //= ../../bower_components/jquery/dist/jquery.js */
+/* //= inculde_some_script.js
