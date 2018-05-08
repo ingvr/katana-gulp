@@ -1,9 +1,9 @@
 Katana Gulp Config
 ==================
 
-*(just for me)*
+For beautiful front-end development!
 
-For beautiful web development!
+HTML + SCSS + JS with ES6+ support
 
 SCSS files ready to work with [SMACSS](https://smacss.com)
 
@@ -17,5 +17,3 @@ npm i
 ```
 
 via https://habrahabr.ru/post/250569/
-
-*<^__
