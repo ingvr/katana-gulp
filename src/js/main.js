@@ -1,1 +1,1 @@
-/* //= inculde_some_script.js
+/* //= inculde_some_script.js */
