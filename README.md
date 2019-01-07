@@ -14,7 +14,7 @@ Some Plugins used in this gulp
 - gulp-rigger
 And you can use //= to include file to your jade, stylus, cs, etc... files:
 ```html
-\\= header.html
+//= header.html
 ```
 
 - gulp-autoprefixer
@@ -28,6 +28,8 @@ To use your gulp offline when you're in a train or in a aircraft, etc...
 (Use `gulp manifest` to create offline version)
 
 More info: see package.json and gulpfile.js files
+
+Also you can use variables, mixins and extends from `src/blocks/global/variables.scss` (examples included)
 
 For beautiful front-end development!
 
