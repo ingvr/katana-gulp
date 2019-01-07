@@ -1,19 +1,66 @@
 Katana Gulp Config
 ==================
 
-For beautiful front-end development!
+v.2
 
-HTML + SCSS + JS with ES6+ support
+HTML + SCSS (SASS) + ES2019 (babel)
 
-SCSS files ready to work with [SMACSS](https://smacss.com)
+Optimized to work with BEM methodology
+Use it with any recommended file structure (https://bem.info/methodology/filestructure/)
 
-see packages.json to view gulp packages
+Some Plugins used in this gulp
+==================
 
-for use, please clone this repo to your project's folder and run:
-
-```shell
-bower i
-npm i
+- gulp-rigger
+And you can use //= to include file to your jade, stylus, cs, etc... files:
+```html
+\\= header.html
 ```
 
-via https://habrahabr.ru/post/250569/
+- gulp-autoprefixer
+Don't care about browser compability
+
+- gulp-imagemin and imagemin-pngquant
+To compress your images
+
+- gulp-manifest
+To use your gulp offline when you're in a train or in a aircraft, etc...
+(Use `gulp manifest` to create offline version)
+
+More info: see package.json and gulpfile.js files
+
+For beautiful front-end development!
+
+
+Installation
+==================
+Please clone this repo to your project's folder and run:
+
+```shell
+bower install
+npm install
+```
+
+to install dependences
+
+Quick Start
+==================
+Use src folder to work with your project
+
+To start gulp just run:
+```shell
+gulp
+```
+
+To clean /build folder:
+```shell
+gulp clean
+```
+
+To create offline version:
+```shell
+gulp manifest
+```
+
+
+Please enjoy your coding proccess, your life and be at the present moment! Yay!

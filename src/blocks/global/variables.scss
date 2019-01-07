@@ -1,28 +1,19 @@
 @charset "UTF-8";
+@import "../../../bower_components/normalize-scss/normalize.scss";
 
-%adaptive-bg {
-  background-position: fixed;
-  background-position:center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+// Import font here
 
 // Colors
-$bg: #fff;
-$color: #2D3033;
-$blue: #18364A;
-$red: #DC3830;
-$gray: #666C72;
-$lightgray: #bbb;
+$bg: #F0F0F0;
+$white: #fff;
+$color: #181818;
+$gray: #596869;
 
-// Media
 $xs: 575px;
 $sm: 767px;
 $md: 991px;
 $lg: 1199px;
-// Example: @media (max-width: $md) { ... }
+//@media screen and (max-width: $md)
 
 @mixin transition($args...) {
   -webkit-transition: $args;

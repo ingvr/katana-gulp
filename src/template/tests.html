@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/5.2.0/mocha.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/5.2.0/mocha.min.js"></script>
+<script>
+  mocha.setup('bdd');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.1.2/chai.js"></script>
+<script>
+  const assert = chai.assert;
+</script>
+
+<script src="../tests/tests.js"></script>
+
+<div class="layout layout_tests container">
+  <h2>tests</h2>
+  <div id="mocha"></div>
+</div>
+
+<script>
+  mocha.run();
+</script>
