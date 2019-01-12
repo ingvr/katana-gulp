@@ -7,6 +7,7 @@ HTML + SCSS (SASS) + ES2019 (babel)
 
 Optimized to work with BEM methodology
 Use it with any recommended file structure (https://bem.info/methodology/filestructure/)
+Added typography and color variables, inspired by http://guides.kontur.ru
 
 Some Plugins used in this gulp
 ==================
