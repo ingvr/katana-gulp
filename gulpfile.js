@@ -36,7 +36,7 @@ const path = {
   watch: {
     html: 'src/**/*.html',
     js: 'src/blocks/**/*.js',
-    style: 'src/blocks/**/*.styl',
+    style: 'src/blocks/**/*.scss',
     img: 'src/images/**/*.*',
     fonts: 'src/fonts/**/*.*',
     tests: 'src/tests/**/*.js'
@@ -64,7 +64,7 @@ gulp.task('html:build', function () {
 
 gulp.task('style:build', function () {
   gulp.src(path.src.style, { base: process.cwd() })
-    .pipe(importify('main.scss', {
+    .pipe(importify('*.scss', {
       cssPreproc: 'scss'
     }))
     .pipe(sass())

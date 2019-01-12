@@ -1,14 +1,42 @@
 @charset "UTF-8";
 @import "../../../bower_components/normalize-scss/normalize.scss";
 
-// Import font here
+// Font
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600&subset=cyrillic");
+
+%font-family {
+	font-family: 'Open Sans', sans-serif;
+}
 
 // Colors
-$bg: #F0F0F0;
-$white: #fff;
-$color: #181818;
-$gray: #596869;
+$bg: #FFFFFF;
+$bg1: #F2F2F2;
+$bg2: #E5E5E5;
 
+$line: #E5E5E5;
+
+$text: #333333;
+$text2: #808080;
+$text3: #A0A0A0;
+
+$link: #3072C4;
+$link-bg: #E4F3FF;
+$link-btn: #5199DB;
+
+$green: #228007;
+$green-bg: #E2F7DC;
+$green-btn: #3F9726;
+
+$red: #CE0014;
+$red-bg: #FFD6D6;
+$red-btn: #D70C17;
+
+$accent: #D97E00;
+$accent-bg: #FFF0BC;
+$accent-btn: #F69C00;
+
+
+// Media
 $xs: 575px;
 $sm: 767px;
 $md: 991px;
@@ -16,29 +44,29 @@ $lg: 1199px;
 //@media screen and (max-width: $md)
 
 @mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
 }
 // Example: @include transition(color .3s ease);
 
 @mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
 }
 // Examlpe: @include opacity(0.8);
 
 %clearfix {
-  *zoom: 1;
-  &:before, &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
 }
 // Example: @extend %clearfix;
