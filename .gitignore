@@ -4,8 +4,7 @@
 node_modules
 bower_components
 build
-*.node
-components
+*.node components
 coverage
 *.orig
 .idea
@@ -13,3 +12,4 @@ sandbox
 test/out-fixtures/*
 test/watch-*.txt
 gulp.1
+package-lock.json
